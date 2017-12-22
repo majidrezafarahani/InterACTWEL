@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>InterACTWEL</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--meta data for sharing links on Facebook-->
+    <meta property="og:title" content="GPS METEROLOGICAL MAP"/>
+    <meta property="og:description" content="This is an example of a storymap."/>
+    <meta property="og:image" content="assets/hurricane2.jpg"/>
+
+    <!--add required stylesheets-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css">
+    <link rel="stylesheet" href="https://cesiumjs.org/releases/1.31/Build/Cesium/Widgets/widgets.css">
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--add favicon for the web page-->
+    <link rel="shortcut icon" href="img/GNSS.ico" type="image/x-icon">
+
+    <!--facebook and info icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--animation-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+    <!--Font-->
+    <link href="https://fonts.googleapis.com/css?family=Cairo" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="css/storymap.2.3.css">
+    <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+    <!--add required libraries-->
+    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.min.js"></script>
+    <script src="https://cesiumjs.org/releases/1.31/Build/Cesium/Cesium.js"></script>
+
+    <!--mini globle map-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.19/topojson.min.js"></script>
+    <script src="js/globeminimap.js"></script>
+
+    <!--story map plugin-->
+    <script src="js/storymap.2.3.js"></script>
+
+
+    <style>
+
+        p {
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+    </style>
+</head>
+<body>
+
+
+<div id="storymap" class="container-fluid">
+    <div class="row">
+        <div class="col-sm-6 col-md-4 storymap-story">
+
+            <section data-scene="GPSMap">
+                <h2 style="color: #045a8d; font-family: sans-serif; " align="center" ><b>GPS meteorology </b></h2>
+
+                <!--<p align="justify">-->
+                <!--This project will use data to produce a geovisualization, predicting hurricane path in US east coast states-->
+                <!--(Florida, Georgia, North and South Carolina). The path forecasting is based on the 24 hour GNSS observations-->
+                <!--of stations located at east coast area. As a case study, we adopted one of the most recent destructive and-->
+                <!--long-lived hurricane along the Florida, Georgia, and South-Carolina coast, namely, <i><b>Hurricane Matthew</b></i>, occurred-->
+                <!--in October 2016.-->
+                <!--To investigate the potential of GNSS data for retrieving the perturbation of GNSS derived PWV,-->
+                <!--seven days (5 October-11 October) observations of <a href="https://www.ngs.noaa.gov/CORS_Map/"><b>Continuously Operating Reference Stations (CORS) </b></a> were used to-->
+                <!--track the hurricane trace .</p>-->
+                <P align="justify" >
+                    GPS meteorology refers to the use of the effect of the atmosphere on the propagation of the Global Positioning System's (GPS) radio signals to derive information on the state of the (lower, neutral) atmosphere.
+
+                    There are currently two main operational techniques in use in GPS meteorology: GPS limb sounding from orbit, and GPS water vapour monitoring.
+                </P>
+                <p align="justify"  >
+                    Water vapour is a very important gas for meteorological and climatological studies, because of the latent heat it carries in transport. Additionally it is a powerful greenhouse gas. The GPS technique is especially valuable because it measures absolute water vapour content or partial pressure rather than relative humidity, which corresponds to water vapour contents that are strongly dependent on the often not precisely known temperature.
+                </p>
+                <br/>
+                <img src="img/new.jpg" class="img-responsive" alt="responsive image" alt-text="Hurricane 2016" style=" margin-right: 100px" >
+                <br/><br/>
+
+            </section>
+
+
+        </div>
+        <!--map div-->
+        <div class="col-sm-6 col-md-8 storymap-map"></div>
+    </div>
+
+
+</div>
+
+<!-- main javascript -->
+<script type="text/javascript">
+
+
+    var layers = {
+        Stations: {
+            layer: L.geoJson.ajax('assets/TestBuffer1.geojson', {
+                color: 'orange',
+                weight: 20,
+                opacity: 0.3
+            })
+        },
+
+
+        cartodb_dark: {layer:L.tileLayer('https://api.mapbox.com/styles/v1/hoda-tahami/cj9j2lkb52uwl2spkgiqcuck8/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiaG9kYS10YWhhbWkiLCJhIjoiY2o4eHk3cDE2MDBzOTMzcXJ5dHJuY3h2NSJ9.qeQeUCbBvD3zRKcwb3TIlw#13.2/40.721642/-73.990029/0', {
+            detectRetina: true,
+            attribution: 'Created By <a href="http://github.com/HodaTahami/">Hoda Tahami</a> based on the <a href="assets/license.txt">Mapbox Odyssey style</a>'
+        })}
+    };
+
+    var scenes = {
+        GPSMap: {lat: 32.104717, lng:  -90.335284 , zoom: 6, name: 'GPSMap',layers: ['Stations']}
+    };
+
+    $('#storymap').storymap({
+        scenes: scenes,
+        layers: layers,
+        baselayer: layers.cartodb_dark,
+        legend: true, // if you do not want a legend feature, you can simply not define the createLegend function.
+        credits:  "Created by Hoda Tahami, 2017",
+        loader: true,
+        scalebar: false,
+        navwidget: false,
+
+        createMap: function () {
+            // create a map in the "map" div, set the view to a given place and zoom
+            var map = L.map($(".storymap-map")[0], {zoomControl: false, scrollWheelZoom: false}).setView([28.536343, -81.382425], 15);
+
+            //add an miniglobe
+            new L.Control.GlobeMiniMap({
+                marker: 'red',
+                position: 'bottomright'
+            }).addTo(map);
+
+
+
+            return map;
+        }
+    });
+</script>
+</body>
+</html>

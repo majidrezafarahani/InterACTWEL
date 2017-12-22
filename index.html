@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>InterACTWEL</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.min.js"></script>
+       <link href="css/full-width-pics.css" rel="stylesheet">
+    <style>
+        body {
+            width: 100%;
+            margin: 0;
+        }
+        /* Style the header */
+        .header {
+            background-color: #f1f1f1;
+            padding: 0px;
+            text-align: center;
+            width: 100%;
+        }
+        /* Remove the navbar's default margin-bottom and rounded borders */
+        .navbar {
+            margin-bottom: 0;
+            border-radius: 0;
+            background-color: #E58E0D;
+            color: #4CAF50;
+        }
+        .li {
+            color: #F6F9FF;}
+
+        /* Add a gray background color and some padding to the footer */
+        footer {
+          /* background-color: #f2f2f2;*/
+            background-color: #5c5c3d;
+            padding: 25px;
+        }
+
+        .carousel-inner img {
+            width: 100%; /* Set width to 100% */
+            margin: auto;
+            min-height:200px;
+        }
+        .nav.navbar-nav li a {
+            color: blue;
+        }
+        /* Hide the carousel text when the screen is less than 600 pixels wide
+        @media (max-width: 800px) {
+            .carousel-caption {
+                display: none;
+            }
+        }*/
+    </style>
+
+</head>
+
+
+<body>
+<div class="header">
+    <img src="img/header4.jpg" alt="Image">
+</div>
+<!-- <div class="container">
+    <img src="img/header1.jpg" alt="Image">
+</div>-->
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Logo</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="about.html">About </a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false">
+                        Services
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
+                        <a class="dropdown-item" href="StoryMap.html">Purpose</a><br>
+                        <a class="dropdown-item" href="Data%20Monitoring.html">contribute</a><br>
+                        <a class="dropdown-item" href="GPSMeterology.html">Data</a>
+
+                    </div>
+                </li>
+                <li><a href="#">models</a></li>
+                <li><a href="contact.html">Contact us</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<br>
+<br>
+<div class="container text-center">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="well">
+                    <h2>What is InterACTWEL</h2>
+                    <p style="text-align:justify">•	InterACTWEL (Interactive Adaptation and Collaboration Tool for managing Water, Energy and Land)
+                        is a computer-aided decision support tool that is being developed to empower land, water, energy
+                        managers and food producers to envision and plan towards a resilient future for their local
+                        communities.</p>
+                    <a href="readmore1.html" target="_blank">Read more</a>
+                </div>
+                <div class="well">
+                    <p style="text-align:justify">A secure decision support system for coordination of adaptation planning among Food,
+                        Energy, and Water actors in the Pacific Northwest</p><a href="readmore2.html" target="_blank">Research Goal</a>
+                </div>
+            </div>
+            <div class="col-sm-8">
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                            <li data-target="#myCarousel" data-slide-to="2"></li>
+                            <li data-target="#myCarousel" data-slide-to="3"></li>
+                            <li data-target="#myCarousel" data-slide-to="4"></li>
+                        </ol>
+
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                <img src="img/1.jpg" alt="Image">
+                                <div class="carousel-caption">
+                                    <h3>Food</h3>
+
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <img src="img/2.jpg" alt="Image">
+                                <div class="carousel-caption">
+                                    <h3>Energy</h3>
+                                    <p>ENERGY ENERGY ENERGY ...</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img src="img/3.jpg" alt="Image">
+                                <div class="carousel-caption">
+                                    <h3>Land</h3>
+
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img src="img/4.jpg" alt="Image">
+                                <div class="carousel-caption">
+                                    <h3>Energy</h3>
+
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img src="img/5.jpg" alt="Image">
+                                <div class="carousel-caption">
+                                    <h3>Water</h3>
+
+                                </div>
+                            </div>
+                        </div>
+
+                                                <!-- Left and right controls -->
+                        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+            </div>
+<br><br><br><br><br>
+<div class="container text-center">
+   <br> <h3>WHAT WE DO</h3><br>
+    <div class="row">
+        <div class="col-sm-3">
+            <img src="img/water.jpg" alt="Image">
+            <!-- <img src="201.jpg" alt="Image">-->
+             <p>Water</p>
+         </div>
+        <div class="col-sm-3">
+             <img src="img/food.png" alt="Image">
+             <p>Land</p>
+         </div>
+         <div class="col-sm-3">
+             <a href="storymap1.html"><img src="img/energy.jpg" alt="Image"></a>
+             <p>Energy</p>
+         </div>
+         <div class="col-sm-3">
+             <a href="storymap2.html"><img src="img/FEW1.jpg"  alt="Storymap"></a>
+             <p>Storymap</p>
+         </div>
+        <div class="col-sm-3">
+            <img src="img/purpose.jpg" alt="Image">
+            <!-- <img src="201.jpg" alt="Image">-->
+            <p>Purpose</p>
+        </div>
+        <div class="col-sm-3">
+            <img src="img/contribution.jpg" alt="Image">
+            <p>Contribute</p>
+        </div>
+        <div class="col-sm-3">
+            <a href="storymap1.html"><img src="img/data.png" alt="Image"></a>
+            <p>Data</p>
+        </div>
+        <div class="col-sm-3">
+            <a href="storymap2.html"><img src="img/FEW1.jpg"  alt="Storymap"></a>
+            <p>Storymap</p>
+        </div>
+         </div>
+     </div>
+ </div><br>
+    <!-- Footer -->
+    <footer class="container-fluid text-center">
+        <div class="container">
+            <p class="m-0 text-center text-white"> &copy; 2017, Civil Engineering Department|Oregon State University. All
+                Rights Reserved. </p>
+        </div>
+        <!-- /.container -->
+    </footer>
+
+ </div>
+ </body>
+ </html>
