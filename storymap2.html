@@ -4,26 +4,28 @@
     <title>InterACTWEL</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <!--meta data for sharing links on Facebook-->
     <meta property="og:title" content="InterACTWEL"/>
     <meta property="og:description" content="This is an example of a storymap."/>
     <meta property="og:image" content="assets/201.jpg"/>
 
     <!--add required stylesheets-->
+    <!--leaflet css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css">
     <link rel="stylesheet" href="https://cesiumjs.org/releases/1.31/Build/Cesium/Widgets/widgets.css">
     <link href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-
+    <link rel="stylesheet" href="css/color.css">
+    <!--Google Font-->
+    <link href="https://fonts.googleapis.com/css?family=Cairo" rel="stylesheet">
     <!--add favicon for the web page-->
     <link rel="shortcut icon" href="img/favicon (1).ico" type="image/x-icon">
 
     <!--facebook and info icons-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
     <!--animation-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 
@@ -33,15 +35,20 @@
     <link rel="stylesheet" type="text/css" href="css/storymap.2.3.css">
     <!--add required libraries-->
     <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!--leaflet.ajax for asynchronously adding geojson data-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.min.js"></script>
     <script src="https://cesiumjs.org/releases/1.31/Build/Cesium/Cesium.js"></script>
-
+    <!--boostrap-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!--mini globle map-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.19/topojson.min.js"></script>
     <script src="js/globeminimap.js"></script>
+
 
     <!--story map plugin-->
     <script src="js/storymap.2.3.js"></script>
@@ -67,6 +74,7 @@
                 <br/><br/><br/>
 
             </section>
+
             <section data-scene="GPSMap">
                 <h2 style="color: #045a8d" align="left" ><b>InterACTWEL </b></h2>
                 <p align="justify">
@@ -138,6 +146,28 @@
 
 
             </section>
+            </section>
+            <section data-scene="Path1">
+
+                <h2 style="color: #045a8d" align="left" ><b>InterACTWEL</b></h2>
+                <p align="justify">
+                    InterACTWEL aims to help land, water, energy managers, and food producers identify long-term management options that respond to potential threats, and empower coordination of management efforts
+                </p>
+                <br/>
+                <img src="img/colombiaBasin.jpg" class="img-responsive" alt="responsive image" alt-text="colombiaBasin" >
+                <br/><br/>
+
+
+            </section>
+
+            <section data-scene="scene4">
+                <h2>Water Food Energy</h2>
+                <br/><span style="color: red ">Hover on the Facebook icon </span>
+                <video controls width="500px" class="embeded-photo">
+                    <source src="assets/Sustainability in the Water-Energy-Food Nexus.mp4" />
+                </video>
+                <br/><br/><p>Why Thousands Are Facebook "Checking In" At Standing Rock, ND from <a href="https://youtu.be/Xu5Mz17t0IA">Youtube</a>.</p>
+            </section>
 
             <section data-scene="end" data-background="img/water2.jpg">
                 <div class="fullscreen text-center">
@@ -151,16 +181,17 @@
 
                 </div>
                 <div class="credit">
-                    <p><img style="width:180px;" align="right" src="img/osu.png"></p> <br/><br/><br/>
+                    <p><img style="width:180px;" align="right" src="img/osu3.jpg"></p> <br/><br/><br/>
                     <p>Created by Majid Farahani From Oregon State University</p>
                 </div>
             </section>
 
         </div>
+
         <!--map div-->
         <div class="col-sm-6 col-md-8 storymap-map"></div>
     </div>
-
+    <div class="progress-line"></div>
 
     <dl>
         <dt>
@@ -171,7 +202,8 @@
         </dt>
         <dt>
             <!--github icon-->
-            <a class="fa fa-git-square btn" href="https://github.com/majidrezafarahani" style="top:60px;color:#d0d1e6"
+            <a class="fa fa-git-square btn" style="top:60px;color:#d0d1e6"
+               href="https://github.com/majidrezafarahani"
                target="_blank"></a>
         </dt>
         <dt>
@@ -210,21 +242,35 @@
 <script type="text/javascript">
 
 
-    var layers = {
+   var layers = {
         Stations: {
-            layer: L.geoJson.ajax('assets/umatilla3.geojson', {
+            layer: L.geoJson.ajax('http://mapious.ceoas.oregonstate.edu/geoserver/mapious/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=ore_counties&outputFormat=application%2Fjson', {
                 color: 'orange',
-                weight: 20,
+                weight: 2,
                 opacity: 0.3
             })
         },
-        HurricanePath: {
-            layer: L.geoJson.ajax('assets/umatilla3.geojson', {
+        Umatilla: {
+            layer: L.geoJson.ajax('assets/umatilla.geojson', {
                 color: 'red',
-                weight: 20,
+                weight: 2,
                 opacity: 0.3
             })
         },
+       Streams: {
+           layer: L.geoJson.ajax('assets/Streams.geojson', {
+               color: 'blue',
+               weight: 2,
+               opacity: 0.3
+           })
+       },
+       Watersheds: {
+           layer: L.geoJson.ajax('assets/watersheds.geojson', {
+               color: 'green',
+               weight: 2,
+               opacity: 0.3
+           })
+       },
         satellite: {
             layer: L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiamFrb2J6aGFvIiwiYSI6ImNpcms2YWsyMzAwMmtmbG5icTFxZ3ZkdncifQ.P9MBej1xacybKcDN_jehvw', {
                 id: 'mapbox.satellite'
@@ -233,16 +279,26 @@
 
 
 
-        cartodb_dark: {layer:L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+       /* cartodb_dark: {layer:L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
             detectRetina: true,
             attribution: 'Created By <a href="http://github.com/majidrezafarahani">Majid Farahani</a> based on the <a href="assets/license.txt">Mapbox Odyssey style</a>'
-        })}
-    };
+        */
+
+       cartodb_dark: {layer:L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
+           maxZoom: 19,
+           attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, Tiles courtesy of <a href="http://hot.openstreetmap.org/" target="_blank">Humanitarian OpenStreetMap Team</a>'
+
+       })}
+    }
+
+
+
+
 
     var scenes = {
         overview: {lat: 45.899522, lng: -119.305170, zoom: 9, name: 'Cover Page'},
         GPSMap: {lat: 45.899522, lng: -119.305170, zoom: 11, name: 'GPSMap',layers: ['Stations']},
-        Path: {lat: 45.899522, lng: -119.305170, zoom: 12, name: 'Path',layers: ['HurricanePath', 'satellite'] },
+        Path: {lat: 45.899522, lng: -119.305170, zoom: 10, name: 'Path',layers: ['Umatilla', 'Streams', 'Watersheds', 'satellite'] },
         end: {lat: 45.899522, lng: -119.305170, zoom: 14, name: 'The End'}
     };
 
@@ -253,12 +309,16 @@
         legend: true, // if you do not want a legend feature, you can simply not define the createLegend function.
         credits:  "Created by Majid Farahani, 2017",
         loader: true,
-        scalebar: false,
+        scalebar: true,
         navwidget: true,
+        flyto: false,
+        scrolldown: true,
+        progressline: true,
+
 
         createMap: function () {
             // create a map in the "map" div, set the view to a given place and zoom
-            var map = L.map($(".storymap-map")[0], {zoomControl: false, scrollWheelZoom: false}).setView([28.536343, -81.382425], 15);
+            var map = L.map($(".storymap-map")[0], {zoomControl: false, scrollWheelZoom: true}).setView([28.536343, -81.382425], 15);
 
             //add an miniglobe
             new L.Control.GlobeMiniMap({

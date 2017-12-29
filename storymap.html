@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css">
     <link rel="stylesheet" href="https://cesiumjs.org/releases/1.31/Build/Cesium/Widgets/widgets.css">
     <link href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/color.css">
     <!--animation-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 
@@ -68,7 +68,17 @@
     <div class="row">
         <div class="col-sm-6 col-md-4 main">
             <section data-scene="scene1">
-                <h2>scene 1</h2>
+                <h4>BEAVER COUNTY WATER IN DANGER</h4>
+                <p>Decades of over-pumping is now catching up to the people and businesses in and around Beaver County.The graph on below
+                    shows the declining groundwater levels over the past 30 years. Local officials worry having enough ground water
+                    available for agricultural practices and drinking water for communities. State officials warn that heavy sanctions on
+                    groundwater use may be coming unless the community acts quickly to manage groundwater supplies</p>
+                <br/>
+                <img src="img/graph1.jpg" class="img-responsive" alt="responsive image" alt-text="colombiaBasin" >
+                <br/><br/>
+                <br/>
+                <img src="img/policychange.jpg" class="img-responsive" alt="responsive image" alt-text="colombiaBasin" >
+                <br/><br/>
             </section>
             <section data-scene="scene2">
                 <h2>scene 2</h2>
@@ -92,14 +102,23 @@
 
     var layers = {
         'layer 1': [L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}'), '<i style="background: black; opacity: 0.5"></i><p><b>legend 1</b></p>'],
-        'layer 2': [ L.geoJson.ajax('http://mapious.ceoas.oregonstate.edu/geoserver/ceoas/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=ceoas:admin&outputFormat=application%2Fjson', {color: 'orange', weight: 5}), '<i style="background: orange; opacity: 0.5"></i><p><b>legend 2</b></p>']
+        'layer 2': [ L.geoJson.ajax('http://mapious.ceoas.oregonstate.edu/geoserver/ceoas/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=ceoas:admin&outputFormat=application%2Fjson', {color: 'orange', weight: 5}), '<i style="background: orange; opacity: 0.5"></i><p><b>legend 2</b></p>'],
+        'layer 3' :  [L.geoJson.ajax('assets/StandingRock_outline.geojson',  {
+            color: "orange",
+            weight: 0,
+            opacity: 1,
+            fillOpacity: 0.5
+        })]
+
+
     };
 
     var scenes = {
         scene1: {lat: 45.899522, lng: -119.305170, zoom: 14, layers: ['layer 1'], name: "scene 1"},
         scene2: {lat: 45.899522, lng: -119.305170, zoom: 12, layers: ['layer 2'], name: "scene 2"},
-        scene3: {lat: 45.899522, lng: -119.305170, zoom: 14, layers: ['layer 1', 'layer 2'], name: "scene 3"}
+        scene3: {lat: 45.899522, lng: -119.305170, zoom: 14, layers: ['layer 1', 'layer 2', 'layer 3'], name: "scene 3"}
     };
+
 
     $('.main').storymap({
         scenes: scenes,
