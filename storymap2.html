@@ -266,7 +266,7 @@
        },
        Watersheds: {
            layer: L.geoJson.ajax('assets/watersheds.geojson', {
-               color: 'green',
+               color: 'blue',
                weight: 2,
                opacity: 0.3
            })
@@ -297,8 +297,8 @@
 
     var scenes = {
         overview: {lat: 45.899522, lng: -119.305170, zoom: 9, name: 'Cover Page'},
-        GPSMap: {lat: 45.899522, lng: -119.305170, zoom: 11, name: 'GPSMap',layers: ['Stations']},
-        Path: {lat: 45.899522, lng: -119.305170, zoom: 10, name: 'Path',layers: ['Umatilla', 'Streams', 'Watersheds', 'satellite'] },
+        GPSMap: {lat: 45.899522, lng: -119.305170, zoom: 7, name: 'GPSMap',layers: ['Stations']},
+        Path: {lat: 45.899522, lng: -119.305170, zoom: 9, name: 'Path',layers: ['Umatilla', 'Streams', 'Watersheds', 'satellite'] },
         end: {lat: 45.899522, lng: -119.305170, zoom: 14, name: 'The End'}
     };
 
