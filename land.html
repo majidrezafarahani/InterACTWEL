@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>InterACTWEL</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <!-- <link href="css/modern-business.css" rel="stylesheet">-->
+
+    <style>
+        /* Global Styles */
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            padding-top: 0px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+        }
+
+        .img-portfolio {
+            margin-bottom: 30px;
+        }
+
+        .img-hover:hover {
+            opacity: 0.8;
+        }
+
+        /* Home Page Carousel */
+
+        header.carousel {
+            height: 50%;
+        }
+
+        header.carousel .item,
+        header.carousel .item.active,
+        header.carousel .carousel-inner {
+            height: 100%;
+        }
+
+        header.carousel .fill {
+            width: 100%;
+            height: 100%;
+            background-position: center;
+            background-size: cover;
+        }
+
+        /* 404 Page Styles */
+
+        .error-404 {
+            font-size: 100px;
+        }
+
+        /* Pricing Page Styles */
+
+        .price {
+            display: block;
+            font-size: 50px;
+            line-height: 50px;
+        }
+
+        .price sup {
+            top: -20px;
+            left: 2px;
+            font-size: 20px;
+        }
+
+        .period {
+            display: block;
+            font-style: italic;
+        }
+
+        /* Footer Styles */
+
+        footer {
+            margin: 50px 0;
+        }
+
+        /* Responsive Styles */
+
+        @media (max-width: 991px) {
+            .customer-img,
+            .img-related {
+                margin-bottom: 30px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .img-portfolio {
+                margin-bottom: 15px;
+            }
+
+            header.carousel .carousel {
+                height: 70%;
+            }
+        }
+        .nav.navbar-nav li a {
+            color: #3C3C3C;
+        }
+        .navbar {
+            margin-bottom: 0;
+            border-radius: 0;
+            background-color: #E58E0D;
+        }
+    </style>
+
+    <!-- Custom Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+
+
+    <![endif]-->
+
+</head>
+
+<body>
+<div class="header">
+    <img src="img/header4.jpg" alt="Image">
+</div>
+<!-- Navigation -->
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Logo</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li><a href="index.html">HOME</a></li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false">
+                        ABOUT
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
+                        <a class="dropdown-item" href="readmore1.html">What is InterACTWEL</a><br>
+                        <a class="dropdown-item" href="readmore1.html#C4">Who Uses InterACTWEL</a><br>
+                        <a class="dropdown-item" href="readmore1.html#C5">Why InterACTWEL</a>
+
+
+                    </div>
+                </li>
+                <!-- <li><a href="readmore1.html">About </a></li>-->
+                <li><a href="research-team.html">RESEARCH TEAM </a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false">
+                        RESOURCES
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
+                        <a class="dropdown-item" href="model.html">MODELS</a><br>
+                        <a class="dropdown-item" href="readmore1.html#C4">DATA</a><br>
+                        <a class="dropdown-item" href="storymap2.html">MAPS</a>
+
+
+                    </div>
+                </li>
+                <li><a href="publication.html">PUBLICATIONS</a></li>
+                <li><a href="meetings&events.html">MEETINGS & EVENTS </a></li>
+                <!-- <li class="nav-item dropdown">
+                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                         Services
+                     </a>
+                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
+                         <a class="dropdown-item" href="StoryMap.html">Purpose</a><br>
+                         <a class="dropdown-item" href="Data%20Monitoring.html">contribute</a><br>
+                         <a class="dropdown-item" href="GPSMeterology.html">Data</a>
+
+                     </div>
+                 </li>
+                 <li><a href="#">models</a></li>-->
+                <li><a href="contact.html">CONTACT US</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+
+
+
+    <!-- Intro Content -->
+    <div class="row">
+
+        <div class="col-md-12">
+            <h2>Food</h2>
+
+            <p style="text-align:justify">
+
+                Umatilla County, established in 1862, has an area of 3,231 square miles (Umatilla County
+                History 2009) and approximately 2,057,767 acres. Seventy percent of the land or 1,447,321 acres
+                is divided among 1,658 farms (2007 Census of Agriculture). There are 804,065 acres of total
+                cropland (Ibid.) with 357,529 (OAIN 2009) acres harvested and the products sold in 2008. The
+                rest of the land was left fallow, grazed, or enrolled in the Conservation Reserve Program. In
+                2008, Umatilla County at $378,961,000 had the second highest agricultural sales among the 36
+                Oregon counties, behind Marion County (Ibid.). As can be seen in Figure 2. Umatilla/Hermiston
+                and Milton-Freewater primarily produce irrigated agricultural crops. Umatilla/Hermiston
+                produces more than ninety percent of the Field Crops (potatoes, mint, etc.) and Grasses and
+                Legumes in the County. Milton-Freewater produces more than ninety percent of the Tree Fruit
+                and Nuts in the County. Pilot Rock/Pendleton has the highest sales of Grains (44.71%) and
+                Livestock (43.55%) in the County.
+                crops (e.g. potatoes, green peas, asparagus, melons), hay and silage feeds (e.g. alfalfa, corn, pea
+                vines), fruit products (e.g. apples, cherries, prunes, peaches, apricots, grapes), and an extensive
+                livestock industry raising cattle and calves, hogs and pigs, sheep and lambs, and chickens and
+                turkeys. Besides being the largest industry in this county and second largest industry in Oregon,
+                agriculture creates a rural atmosphere greatly desired by many city, rural, and regional people. A
+                comprehensive plan considers agriculture as an irreplaceable natural resource. Its wise use is of
+                as much importance as other resources.
+
+            </p>
+        </div>
+
+
+        <br>
+
+        <!--<h2 id="C4"> Surface water quality</h2>
+        <p style="text-align:justify">
+
+            Temperature, sedimentation, and nutrients are the most common types of pollution that impair
+            Oregon’s rivers and streams. Impaired water quality drives up the cost of water treatment and
+            limits access to clean water for fish, drinking water, agriculture, and recreation.
+
+
+        </p>
+        <div class="col-md-12">
+            <img class="img-responsive" src="img/Umatilla_River_(Umatilla_County,_Oregon_scenic_images)_(umaDA0087).jpg" alt="">
+        </div>
+        <h2 id="C5">Ground water quality</h2>
+        <p style="text-align:justify">
+
+            Groundwater contamination is also a serious issue in some areas of Oregon. Private domestic
+            wells may face contamination issues from nearby failing septic systems. Industry and agriculture
+            can also be a source of pollutants for groundwater, as can surface water and groundwater
+            interactions.
+            Most of DEQ’s groundwater monitoring efforts target vulnerable areas or areas of known
+            contamination (i.e., Groundwater Management Areas (GWMAs)). Nitrate is one of the most
+            commonly analyzed contaminants in these areas, with data showing that around 30 percent of
+            groundwater samples detect nitrate at levels that suggest a 22 Chapter 1 – Understand Water
+            Resources Today pollution problem exists (7 mg/L), and around 20 percent currently exceed
+            health standards (10 mg/L). Bacteria are a commonly detected contaminant as well, with about
+            20 percent of samples showing positive bacteria detections. Arsenic is not as commonly studied,
+            but when sampled in vulnerable groundwater areas, about 30 percent of samples show levels
+            above health standards (10 ug/L). Other contaminants detected in groundwater studies include
+            Dacthal, manganese, lead, iron, aluminum, perchlorate, uranium and vanadium. There have been
+            few studies that investigate contaminants such as current use and legacy pesticides, herbicides,
+            pharmaceuticals, personal care products, and volatile organic compounds. Based on data
+            collected in the past five years, when detections of those contaminants are found, they are often
+            far below health standards, if any standards exist.
+        </p>
+
+
+        <p></p>
+        <p></p>
+    </div>-->
+</div>
+    <div id="myCarousel" class="carousel slide" data-ride="carousel" class="col-md-4">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+            <li data-target="#myCarousel" data-slide-to="4"></li>
+            <li data-target="#myCarousel" data-slide-to="5"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <img src="img/potato harvest.jpg" alt="Image">
+                <div class="carousel-caption">
+                    <h3>Food</h3>
+                    <p>potato harvest</p>
+
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="img/National Potato Council in Oregon tour.jpg" alt="Image">
+                <div class="carousel-caption">
+                    <h3>Food</h3>
+                    <p>National Potato Council in Oregon tour</p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="img/Potato procesing.jpg" alt="Image">
+                <div class="carousel-caption">
+                    <h3>Food</h3>
+                    <p>Potato processing</p>
+
+                </div>
+            </div>
+            <div class="item">
+                <img src="img/Potato processing plant.jpg" alt="Image">
+                <div class="carousel-caption">
+                    <h3>Food</h3>
+                    <p>Potato processing plant</p>
+
+                </div>
+            </div>
+            <div class="item">
+                <img src="img/web-Lamb-Weston-765x510.jpg" alt="Image">
+                <div class="carousel-caption">
+                    <h3>Food</h3>
+                    <p>web-Lamb-Weston-765x510</p>
+
+                </div>
+            </div>
+            <div class="item">
+                <img src="img/Hermiston onion.jpg" alt="Image">
+                <div class="carousel-caption">
+                    <h3>Food</h3>
+                    <p>Hermiston onion</p>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+<hr>
+
+<!-- Footer -->
+<footer class="container-fluid text-center">
+    <div class="container">
+        <p class="m-0 text-center text-white"> &copy; 2017, Civil Engineering Department, Water Resources Program|Oregon State University. All
+            Rights Reserved. </p>
+    </div>
+    <!-- /.container -->
+</footer>
+</div>
+<!-- /.container -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
