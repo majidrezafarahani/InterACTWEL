@@ -1,18 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5f9ab6dc-1c39-4e3f-bc1d-5df9a5ee61de" name="Default" comment="all text from Holly">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/energy.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/land.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/model.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/water.html" />
+    <list default="true" id="5f9ab6dc-1c39-4e3f-bc1d-5df9a5ee61de" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contact.html" afterPath="$PROJECT_DIR$/contact.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/meetings&amp;events.html" afterPath="$PROJECT_DIR$/meetings&amp;events.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/publication.html" afterPath="$PROJECT_DIR$/publication.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/readmore1.html" afterPath="$PROJECT_DIR$/readmore1.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/research-team.html" afterPath="$PROJECT_DIR$/research-team.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -270,7 +260,7 @@
       <workItem from="1518050127961" duration="2919000" />
       <workItem from="1518648619553" duration="1086000" />
       <workItem from="1518991803128" duration="9333000" />
-      <workItem from="1519062128388" duration="3944000" />
+      <workItem from="1519062128388" duration="3991000" />
     </task>
     <task id="LOCAL-00001" summary="readme">
       <created>1513902917884</created>
@@ -349,11 +339,18 @@
       <option name="project" value="LOCAL" />
       <updated>1518052451540</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="all text from majid and hossein">
+      <created>1519066162262</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1519066162262</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="171690000" />
+    <option name="totallyTimeSpent" value="171737000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -394,7 +391,8 @@
     <MESSAGE value="Holly comments3" />
     <MESSAGE value="logo color" />
     <MESSAGE value="all text from Holly" />
-    <option name="LAST_COMMIT_MESSAGE" value="all text from Holly" />
+    <MESSAGE value="all text from majid and hossein" />
+    <option name="LAST_COMMIT_MESSAGE" value="all text from majid and hossein" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -479,6 +477,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="344">
           <caret line="157" column="34" lean-forward="false" selection-start-line="157" selection-start-column="34" selection-end-line="157" selection-end-column="34" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -486,6 +485,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
           <caret line="105" column="34" lean-forward="false" selection-start-line="105" selection-start-column="34" selection-end-line="105" selection-end-column="34" />
+          <folding>
+            <element signature="n#style#0;n#textarea#0;n#div#0;n#div#3;n#form#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
